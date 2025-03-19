@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Web Developer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <style>
+    body {
+      font-family: 'IBM Plex Mono', monospace;
+      background: linear-gradient(to right, #4361ee, #4895ef, #3f37c9, #4cc9f0);
+      color: #E0E0E0;
+    }
+    .navbar {
+      background-color: #4361ee;
+      padding: 1rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+    .navbar a {
+      color: #E0E0E0;
+      transition: color 0.3s ease;
+    }
+    .navbar a:hover {
+      color: #4cc9f0;
+    }
+    .section-box {
+      background-color: #4895ef;
+      color: #E0E0E0;
+      padding: 2rem;
+      margin-top: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+    .section-box:hover {
+      transform: translateY(-5px);
+      background-color: #3f37c9;
+    }
+    .skill-item {
+      transition: transform 0.3s ease, color 0.3s ease;
+      cursor: pointer;
+    }
+    .skill-item:hover {
+      transform: translateX(8px);
+      color: #4cc9f0;
+    }
+    .hidden-list {
+      display: none;
+      margin-top: 10px;
+    }
+    .section-box:hover .hidden-list {
+      display: block;
+      animation: fadeIn 0.5s ease-in;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-5px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .certificate-item {
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+    .certificate-item:hover {
+      color: #4cc9f0;
+    }
+    .profile-img {
+      transition: transform 0.3s ease-in-out;
+    }
+    .profile-img:hover {
+      transform: scale(1.1) rotate(3deg);
+    }
+  </style>
+</head>
+<body class="flex flex-col min-h-screen">
+  <nav class="navbar flex justify-between items-center">
+    <div class="text-xl font-bold text-white">MY PAGE</div>
+    <div class="space-x-4">
+      <a href="#" class="hover:text-4cc9f0">HOME</a>
+      <a href="#" class="hover:text-4cc9f0">ABOUT</a>
+    </div>
+  </nav>
+
+  <div class="container mx-auto mt-10 p-4 flex-grow fade-in">
+    <div class="flex flex-col items-center md:flex-row md:items-start md:space-x-8">
+      <div class="w-32 h-32 bg-gray-700 mb-4 md:mb-0 rounded-full overflow-hidden">
+        <img src="./abu.jpg" alt="Profile picture placeholder" class="w-full h-full object-cover profile-img"/>
+      </div>
+      <div class="text-center md:text-left">
+        <h1 class="text-2xl font-bold text-white">Sri Apoorvanayaki</h1>
+        <p class="text-lg">
+          I'm <span class="text-4cc9f0 input"></span>
+        </p>
+      </div>
+    </div>
+
+    <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div class="section-box text-center hover-effect">
+        <h2 class="font-bold text-lg">SKILLS</h2>
+        <ul class="hidden-list text-sm">
+          <li class="skill-item">🔹 C++</li>
+          <li class="skill-item">🔹 Java</li>
+          <li class="skill-item">🔹 PHP</li>
+          <li class="skill-item">🔹 Python</li>
+          <li class="skill-item">🔹 JavaScript</li>
+          <li class="skill-item">🔹 HTML</li>
+          <li class="skill-item">🔹 CSS</li>
+        </ul>
+      </div>
+
+      <div class="section-box text-center hover-effect">
+        <h2 class="font-bold text-lg">EXPERIENCE</h2>
+        <p class="hidden-list text-sm">No Experience Yet</p>
+      </div>
+
+      <div class="section-box text-center hover-effect">
+        <h2 class="font-bold text-lg">CONTACT</h2>
+        <ul class="hidden-list text-sm">
+          <li>📞 Phone: <a href="tel:+91 95859 79838" class="text-4cc9f0 hover:text-3f37c9">+91 95859 79838</a></li>
+          <li>📷 Instagram: <a href="https://www.instagram.com/abuu_ravi25/" class="text-4cc9f0 hover:text-3f37c9">@abuu_ravi25</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var typed = new Typed('.input', {
+      strings: ["Web Developer!", "Writer!"],
+      typeSpeed: 100,
+      backSpeed: 100,
+      loop: true,
+      showCursor: true,
+      cursorChar: '|',
+    });
+  </script>
+</body>
+</html>
